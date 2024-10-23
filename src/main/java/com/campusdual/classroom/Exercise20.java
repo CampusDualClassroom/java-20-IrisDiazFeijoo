@@ -7,9 +7,20 @@ public class Exercise20 {
 
     public static List<Person> getPeopleList() {
 
+        List<Person> personList = new ArrayList<>();
+
+        personList.add(new Person("John ","Smith"));
+        personList.add(new Teacher("María","Montesori","Education"));
+        personList.add(new PoliceOfficer("Jake","Peralta","B-99"));
+        personList.add(new Doctor("Gregory","House","Nefrología e infectología"));
+
+        return personList;
     }
 
     public static void showPeopleDetails(List<Person> stringList) {
+        for (Person person : stringList){
+            person.getDetails();
+        }
 
     }
 
@@ -17,7 +28,5 @@ public class Exercise20 {
         List<Person> stringList = getPeopleList();
         showPeopleDetails(stringList);
     }
-
-
 
 }
